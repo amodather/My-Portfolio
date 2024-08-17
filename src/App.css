@@ -32,6 +32,6 @@ section {
 }
 
 .about{
-  background-image: url("D:\React\myportfolio\src\Components\images\technology-1283624_1280.jpg");
+  background-image: url("../src/Components/images/technology-1283624_1280.jpg");
   background-size: cover;
 }
