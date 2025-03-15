@@ -27,8 +27,8 @@ function Parallax() {
     
     return (
         <>
-        <div className="max-lg:hidden h-[200vh] w-full"></div>
-        <div className="h-[600px] sm:h-screen overflow-hidden w-full bg-[#DFD0B8]" ref={ref}>
+        <div className="h-[200vh] w-full"></div>
+        <div className="h-screen overflow-hidden w-full bg-[#DFD0B8]" ref={ref}>
             <div className=" h-full flex flex-col justify-center ">
                 <motion.div style={{ x: translate1 , left: "-40%" }} className="relative flex whitespace-nowrap">
                     <Phrase src={image1} color="white" text="Front End Developer" />
