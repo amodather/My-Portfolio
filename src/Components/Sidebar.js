@@ -1,6 +1,7 @@
 import "./Sidebar.scss"
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Path = props => (
     <motion.path
         fill="transparent"
@@ -21,7 +22,7 @@ function Sidebar() {
             }
         },
         closed: {
-            clipPath: "circle(23px at 250px 40px)",
+            clipPath: "circle(25px at 250px 40px)",
             transition: {
                 duration: 0.5
             }
@@ -54,25 +55,27 @@ function Sidebar() {
             <svg width="23" height="23" viewBox="0 0 23 23">
                 <Path
                     variants={{
-                        closed: { d: "M 2 2.5 L 20 2.5" },
-                        open: { d: "M 3 16.5 L 17 2.5" }
+                        closed: { d: "M 2 5 L 20 5" }, // Top bar in closed state
+                        open: { d: "M 3 18 L 18 3" },   // Diagonal bar in open state
                     }}
-                />
-                <Path
-                    d="M 2 9.423 L 20 9.423"
-                    variants={{
-                        closed: { opacity: 1 },
-                        open: { opacity: 0 }
-                    }}
-                    transition={{ duration: 0.1 }}
+                    transition={{ duration: 0.3 }}
+                    style={{ strokeWidth: "1px" }}
                 />
                 <Path
                     variants={{
-                        closed: { d: "M 2 16.346 L 20 16.346" },
-                        open: { d: "M 3 2.5 L 17 16.346" }
+                        closed: { d: "M 2 12 L 20 12" }, // Bottom bar in closed state
+                        open: { d: "M 3 3 L 18 18" },    // Diagonal bar in open state
                     }}
+                    transition={{ duration: 0.3 }}
+                    style={{ strokeWidth: "1px" }}
                 />
             </svg>
+        </div>
+        <div className="absolute w-full mt-[80px] px-6">
+            <span className="font-inter uppercase text-[13px] font-black text-gray-400">
+                Navigation
+            </span>
+            <hr></hr>
         </div>
         <motion.div className="links" variants={linkVariants} animate={open ? "open" : "closed"}>
             {items.map((item, index) => {
@@ -80,6 +83,12 @@ function Sidebar() {
                     whileHover={{ scale: 1.1 }}>{item}</motion.a>
             })}
         </motion.div>
+        <div className="absolute bottom-2 flex items-center gap-3 uppercase stylefont text-[12px] text-gray-400 px-6">
+            <Link to="http://www.linkedin.com/in/abdelrahman-modather-3b06b1238" className="hover:text-[#DFD0B8] duration-100"
+                target="_blank">LinkedIn</Link>
+            <Link to="https://github.com/amodather" className="hover:text-[#DFD0B8] duration-100"
+                target="_blank">Github</Link>
+        </div>
     </motion.div>
 }
 

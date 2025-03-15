@@ -12,11 +12,11 @@
     justify-content: center;
     z-index: 500;
     display: none;
+    border-left: 100px;
     .menu-button{
         position: fixed;
         top: 30px;
         right: 38px;
-        width: 30;
         height: 30px;
         color: black;
         cursor: pointer;
@@ -26,13 +26,15 @@
         width: 100%;
         height: 100%;
         display: flex;
+        padding-left:30px;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         gap: 20px;
-        font-family: "Alfa Slab One", serif;
+        font-family: "CustomFont", serif;
+        font-variation-settings: 'wdth' 50 , 'slnt' 10;
         a {
-            font-size: 25px;
+            font-size: 30px;
+            font-size: 900;
             text-decoration: none;
             color: black;
             transition: 0.07;

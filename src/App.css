@@ -1,23 +1,32 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./fonts/SoulcraftVF.woff2') format('woff2-variations');
+  font-weight: 100 900; /* Example range for weight axis */
+  font-stretch: 75% 125%; /* Example range for width axis */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.mainfont {
-  font-family: "anton";
-}
 html{
   scroll-behavior: smooth;
 }
 
 .stylefont {
-  font-family: "Alfa Slab One", serif;
+  font-family: "CustomFont", serif;
+}
+
+.widefont{
+  font-family: "CustomFont", serif;
+  font-variation-settings: 'wdth' 50 , 'slnt' 10;
 }
 
 
 body {
-  background-color: #153448;
+  background-color: #DFD0B8;
   color: white;
   font-family: "DM Sans", sans-serif;
 }
@@ -29,9 +38,4 @@ section {
     height: auto;
     padding-bottom: 30px;
   }
-}
-
-.about{
-  background-image: url("../src/Components/images/technology-1283624_1280.jpg");
-  background-size: cover;
 }

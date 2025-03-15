@@ -6,6 +6,10 @@ module.exports = {
       extend: {
         boxShadow: {
           '3xl': '0 10px 10px -15px rgba(0, 0, 0, 0.5)',
+        },
+        fontFamily: {
+          inter: ['Inter','sans-serif'],
+          soul: ['CustomFont']
         }
       }
     },
