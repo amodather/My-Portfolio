@@ -89,9 +89,9 @@ function Home() {
         requestAnimationFrame(raf)
     }, [])
     return (
-        <section className="max-lg:h-[700px]" id="Home">
+        <section className="" id="Home">
             <Navbar />
-            <div className="relative max-lg:h-[2800px] h-[400vh] font-black" ref={container}>
+            <div className="relative h-[400vh] font-black" ref={container}>
                 <motion.div className="sticky top-0 left-0 w-full max-lg:h-[700px] h-screen flex items-center justify-center"
                     style={{
                         clipPath: useTransform(

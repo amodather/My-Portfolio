@@ -24,9 +24,9 @@ function MaskText() {
     const inView = useInView(ref);
     return (
         <div>
-            <div className="max-lg:h-[1400px] h-[200vh] w-full"></div>
+            <div className="h-[200vh] w-full"></div>
             <section className="about">
-                <div className="relative max-lg:h-[700px] h-screen w-full flex items-center justify-center h-full bg-[#DFD0B8]">
+                <div className="relative h-screen w-full flex items-center justify-center h-full bg-[#DFD0B8]">
                     <div className="w-[95%] mt-[-50px] mx-auto text-center md:text-[40px] text-[20px] uppercase widefont" ref={ref}>
                         {texts.map((text, index) => {
                             return <TextAnimation text={text} inView={inView} delay={index} />
