@@ -91,8 +91,8 @@ function Home() {
     return (
         <section className="max-lg:h-[700px]" id="Home">
             <Navbar />
-            <div className="relative h-[400vh] font-black" ref={container}>
-                <motion.div className="sticky top-0 left-0 w-full h-screen flex items-center justify-center"
+            <div className="relative max-lg:h-[2800px] h-[400vh] font-black" ref={container}>
+                <motion.div className="sticky top-0 left-0 w-full max-lg:h-[700px] h-screen flex items-center justify-center"
                     style={{
                         clipPath: useTransform(
                             transform,
@@ -113,7 +113,7 @@ function Home() {
                         className="absolute top-0 left-0 w-full h-full object-cover"></motion.img>
                         <div className="absolute top-0 left-0 bg-black w-full h-full opacity-20"></div>
                 </motion.div>
-                <motion.div className="absolute top-1/4 xl:left-[45%] md:left-[20%] left-[-30%] rotate-90 text-[30px] stylefont z-[-1] w-[180vh] overflow-hidden" variants={sliderParentVariants} initial="initial" animate="animate">
+                <motion.div className="absolute top-1/4 xl:left-[45%] md:left-[20%] left-[-30%] max-md:hidden rotate-90 text-[30px] stylefont z-[-1] w-[180vh] overflow-hidden" variants={sliderParentVariants} initial="initial" animate="animate">
                     <motion.div
                         variants={sliderVariants} initial="initial" animate="animate" transition={{ delay: 2, duration: 5, repeat: Infinity, repeatType: "mirror" }}>
                         SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL.SCROLL
